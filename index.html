@@ -1,40 +1,509 @@
 <!DOCTYPE html>
 <html>
+
+<!-- Heading -->
+<head>
 <meta charset="UTF-8">
-<title>W3.CSS Template</title>
+
+
+<title>Santa Cruz Sign Archive</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/w3architects.css">
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+<link rel="stylesheet" href="css/SantaCruzCSS.css">
+<style>.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+
+  .flex-container > div {
+    width: 22%;
+    padding: 15px;
+  }
+
+      /* customize <a> tag styles */
+  a {
+        text-decoration: none;
+        color: #8accf1;
+        cursor: pointer;
+      }
+  
+      * Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.8;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: right;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+table {
+  border-spacing: 0;
+  width: auto%;
+  border: 10px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+{
+  background-color: black;
+  font-family: cursive;
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.scrollable-box {
+            width: 50%;        /* Set the width of the box */
+            height: 175px;       /* Set the height of the box */
+            overflow-y: scroll;  /* Enable vertical scrolling */
+            border: 20px solid #ccc; /* Border around the box */
+            padding: 10px;       /* Padding inside the box */
+            position: static;
+        }
+</style>
+
+</head>
+
+
+
 <body>
 
-<!-- Navbar (Sits on top) -->
-<div class="w3-top w3-bar w3-blackblue w3-wide w3-paddingSCSA w3-card">
+<!-- Navbar (Sits on top) - includes my shopping basket + search icon -->
+<div class="w3-bar w3-blackblue w3-paddingSCSA w3-card">
+
+  <div>
+    <a class="w3-padding-large w3-hide-small w3-right"
+      ><i class="fa fa-shopping-basket"></i
+    ></a>
+    <a class="w3-padding-large w3-hide-small w3-right"
+      ><i class="fa fa-search"></i
+    ></a>
+  </div>
 
 <!-- Float links to the right. Hide them on small screens -->
 <div class="w3-right w3-hide-small">
-<a href="#menu" class="w3-bar-item w3-button">menu</a>
-<a href="#history" class="w3-bar-item w3-button">history</a>
-<a href="#the artists" class="w3-bar-item w3-button">the artists</a>
-<a href="#all signs" class="w3-bar-item w3-button">all signs</a>
-<a href="#how it's made" class="w3-bar-item w3-button">how it's made</a>
-<a href="#your submission" class="w3-bar-item w3-button">your submissions</a>
-</div>
+<a href="#menu" class="w3-bar-item w3-button w3-hover-text-green">menu</a>
+<a href="#history" class="w3-bar-item w3-button w3-hover-text-green">history</a>
+<a href="#the artists" class="w3-bar-item w3-button w3-hover-text-green">the artists</a>
+<a href="#all signs" class="w3-bar-item w3-button w3-hover-text-green">all signs</a>
+<a href="#how it's made" class="w3-bar-item w3-button w3-hover-text-green">how it's made</a>
+<a href="#your submission" class="w3-bar-item w3-button w3-hover-text-green">your submissions</a>
 
 </div>
+</div>
 
-<!-- Page Start (I can't figure this search bar out...why not showing?)-->
-
-
-<!-- Image in Display Container -->
+<!-- Image in Display Container/Homepage hero image -->
 
 <div class="w3-display-container w3-content" style="max-width:1500px;">
 <img class="w3-image" src="images/Rio Theater Sign2.png"width="100%">
 <div class="w3-display-topleftinset">
-<img class="w3-image" src="images/SCSA Logo.png" width="25%">
+<img class="w3-image" src="images/SCSA Logo.png" width="30%">
 </h1>
 </div>
 </div>
 
-<!-- Page End -->
+<!-- Homepage End -->
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<!-- Slideshow Gallery -->
+<h2 style="text-align:left">Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="images/Pleasure Point Motel NO VACANCY EVER.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="images/Trailer Haven.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="images/Scopazzi's Sign.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="images/Rio Theater Sign edited.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="images/Scarborough Lumber Sign.JPG" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="images/Las Palmas Sign.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="images/Pleasure Point Motel NO VACANCY EVER.jpg" style="width:100%" onclick="currentSlide(1)" alt="No Vacancy EVER">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/Trailer Haven.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/Scopazzi's Sign.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/Rio Theater Sign edited.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/Scarborough Lumber Sign.JPG" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="images/Las Palmas Sign.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+<p>Click the button to sort the table alphabetically, by name:</p>
+<p><button onclick="sortTable()">Sort</button></p>
+
+<div style="overflow-x:auto;">
+
+<table id="myTable">
+  <tr>
+    <th>Image</th>
+    <th>Business Name</th>
+    <th>Location</th>
+    <th>Sign Type</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td><img class="document" src="images/Scarborough Lumber Sign.JPG" style="max-height: 200px;"></td>
+    <td>Scarborough Lumber</td>
+    <td>Boulder Creek</td>
+    <td>Hand-Painted</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><img class="document" src="images/Rio Theater Sign.png" style="max-height: 200px;"></td>
+    <td>Rio Theater</td>
+    <td>Midtown, Santa Cruz</td>
+    <td>Neon</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><img class="document" src="images/Bad Animal Hanloh Thai.jpg" style="max-height: 200px;"></td>
+    <td>Bad Animal/Hanloh Thai</td>
+    <td>Downtown, Santa Cruz</td>
+    <td>Mural</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><img class="document" src="images/Bee Clene Sign.jpg" style="max-height: 200px;"></td>
+    <td>Bee-Clene</td>
+    <td>Live Oak, Santa Cruz</td>
+    <td>Hand-Painted</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><img class="document" src="images/Blowout Surf Shack.jpg" style="max-height: 200px;"></td>
+    <td>Blowout Surf Shack</td>
+    <td>Live Oak, Santa Cruz</td>
+    <td>Hand-Painted</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><img class="document" src="images/Dream Inn Sign.JPG" style="max-height: 200px;"></td>
+    <td>Dream Inn</td>
+    <td>Beach Boardwalk, Santa Cruz</td>
+    <td>Neon</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><img class="document" src="images/Fonda Felix Sign.jpg" style="max-height: 200px;"></td>
+    <td>Fonda Felix</td>
+    <td>West Side, Santa Cruz</td>
+    <td>Hand-Painted</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><img class="document" src="images/Johnnie's Sign.jpg" style="max-height: 200px;"></td>
+    <td>Johnnie's Super</td>
+    <td>Boulder Creek, California</td>
+    <td>Neon</td>
+    <td></td>
+  </tr>
+</table>
+</div>
+
+
+<script>
+function sortTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("myTable");
+  switching = true;
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[0];
+      y = rows[i + 1].getElementsByTagName("TD")[0];
+      //check if the two rows should switch place:
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        //if so, mark as a switch and break the loop:
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+
+<br>
+<br>
+<br>
+<br>
+<div class="scrollable-box" >
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce congue, elit in aliquet lobortis, urna elit condimentum quam, quis blandit velit felis ac nunc. Aenean et tortor at risus blandit adipiscing. Curabitur adipiscing ligula non felis placerat, ut dapibus lectus volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce congue, elit in aliquet lobortis, urna elit condimentum quam, quis blandit velit felis ac nunc. Aenean et tortor at risus blandit adipiscing. Curabitur adipiscing ligula non felis placerat, ut dapibus lectus volutpat.
 </div>
 
 </body>
