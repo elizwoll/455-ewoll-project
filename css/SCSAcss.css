@@ -1,0 +1,38 @@
+
+/* not sure if it does anything? */
+html,body{font-family:'Cairo', sans-serif;font-weight:normal; font-size:13px; line-height:1.5}html{overflow-x:fixed}
+
+/* ? */
+.w3-content{max-width:980px}.w3-auto{max-width:1140px}
+
+/* ? */
+.w3-display-container{position:relative}
+
+/* ? */
+.w3-display-slideshow{align-content: center;}
+
+/* is making nav text blue... */
+.w3-text-green,.w3-hover-text-green:hover{color:#1bfbff!important}
+
+/* space between website links in nav bar */
+.w3-bar .w3-bar-item{padding: 0px 20px;float:left;vertical-align:bottom}
+
+/* Seems to create space above the logo, tried adding to left and added to whole page */
+.w3-paddingSCSA{padding-top:0px;float:right;padding-left:0px; padding-bottom:5px}
+
+/* created nice spacing for icons */
+.w3-padding-large{padding:12px 24px!important}
+
+/* Made icons go right */
+.w3-right{float:right;vertical-align:bottom}
+
+/* ? */
+.w3-left{float:left!important}
+
+/* Makes background black and... */
+.w3-blackblue,.w3-hover-black:hover{color:#c0c9da!important;background-color:#000!important}
+
+/* Removes weird edges to frame etc */
+.w3-image{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}
+
+.w3-center{text-align:center!important}

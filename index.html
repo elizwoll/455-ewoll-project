@@ -12,51 +12,68 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-<link rel="stylesheet" href="css/SantaCruzCSS.css">
-<style>.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 0;
-  }
+<link rel="stylesheet" href="css/SCSAcss.css">
 
-  .flex-container > div {
-    width: 22%;
-    padding: 15px;
-  }
+<title>YouTube Video</title>
 
-      /* customize <a> tag styles */
+<style>
+
+   .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0;
+      }
+
+/* customize <a> tag styles - determining colors of nav text?*/
   a {
         text-decoration: none;
-        color: #8accf1;
+        color: #9ce6ff;
         cursor: pointer;
       }
   
-      * Position the image container (needed to position the left and right arrows) */
+      /* Position the image container (needed to position the left and right arrows) */
+
+/* not seeing a difference if i delete */
+/* Position the image container (needed to position the left and right arrows) */
+
+.imgcenter {
+  vertical-align: middle;
+  position: center
+}
+
+
 .container {
   position: relative;
 }
 
-/* Hide the images by default */
+.container-forarrows {
+  position: relative;
+}
+
+/* Hide the images by default in carousel */
 .mySlides {
   display: none;
+  align-items: center;
+  size: 100%;
 }
 
-/* Add a pointer when hovering over the thumbnail images */
+/* Define a type of cursor for hovering */
 .cursor {
-  cursor: pointer;
+  cursor: arrow;
 }
+
 
 /* Next & previous buttons */
-.prev,
+.prev
 .next {
-  cursor: pointer;
+  cursor: arrow;
   position: absolute;
   top: 40%;
   width: auto;
   padding: 16px;
-  margin-top: -50px;
+  margin-top: 50px;
   color: white;
   font-weight: bold;
   font-size: 40px;
@@ -65,17 +82,12 @@
   -webkit-user-select: none;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
+/* On hover, make next and back buttons black */
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(0, 0, 0);
 }
+
 
 /* Number text (1/3 etc) */
 .numbertext {
@@ -86,96 +98,34 @@
   top: 0;
 }
 
+
 /* Container for image text */
 .caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
+  text-align: left;
+  background-color: #ffffff00;
+  padding: 0px 16px;
+  color: rgb(0, 0, 0);
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
-/* Six columns side by side */
-.column {
+/* Container for image text TOP, LEFT, BOTTOM */
+.logo-container{
+  align-items: center;
   float: left;
-  width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.8;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-
-
-/* Position the image container (needed to position the left and right arrows) */
-.container {
-  position: relative;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
+  vertical-align: bottom;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  display: flex;
   color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
+/* Container for slideshow image */
+.image-container-slideshow{
+  position: center;
+  vertical-align: center;
+  color: white
 }
 
 .row:after {
@@ -186,36 +136,44 @@
 
 /* Six columns side by side */
 .column {
-  float: right;
-  width: 16.66%;
+  float: left; padding: 5px;
+  width: 10%;
 }
 
 /* Add a transparency effect for thumnbail images */
 .demo {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .active,
 .demo:hover {
   opacity: 1;
+}
+
+.slideshowtest {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 table {
   border-spacing: 0;
-  width: auto%;
+  width: auto;
   border: 10px solid #ddd;
 }
 
+/* aligning text in the table */
 th, td {
   text-align: left;
   padding: 16px;
 }
 
+/* background color of every other row in table */
 tr:nth-child(even) {
-  background-color: #f2f2f2
+  background-color: #ffffff
 }
 
-{
+/* background color of every other row in table */
+.idk{
   background-color: black;
   font-family: cursive;
 }
@@ -227,22 +185,14 @@ tr:nth-child(even) {
   animation: glow 1s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-}
-
 .scrollable-box {
-            width: 50%;        /* Set the width of the box */
+            width: 40%;        /* Set the width of the box */
             height: 175px;       /* Set the height of the box */
             overflow-y: scroll;  /* Enable vertical scrolling */
-            border: 20px solid #ccc; /* Border around the box */
-            padding: 10px;       /* Padding inside the box */
+            border: 10px solid #ffffff; /* Border around the box */
+            background-color: #1e9cbb;
+            color: rgb(255, 255, 255);
+            padding: 20px;       /* Padding inside the box */
             position: static;
         }
 </style>
@@ -250,42 +200,47 @@ tr:nth-child(even) {
 </head>
 
 
-
 <body>
 
+  
 <!-- Navbar (Sits on top) - includes my shopping basket + search icon -->
-<div class="w3-bar w3-blackblue w3-paddingSCSA w3-card">
+<div class="w3-bar w3-blackblue">
 
   <div>
-    <a class="w3-padding-large w3-hide-small w3-right"
+
+    <a class="w3-padding-large w3-right"
       ><i class="fa fa-shopping-basket"></i
     ></a>
+    
     <a class="w3-padding-large w3-hide-small w3-right"
-      ><i class="fa fa-search"></i
-    ></a>
+      ><i class="fa fa-search"></i>
+    </a>
+    <img class="logo-container" src="images/SCSA Logo Blue2.png" width="25%">
+
+
+    <div>
+   
   </div>
+
+  
 
 <!-- Float links to the right. Hide them on small screens -->
 <div class="w3-right w3-hide-small">
-<a href="#menu" class="w3-bar-item w3-button w3-hover-text-green">menu</a>
-<a href="#history" class="w3-bar-item w3-button w3-hover-text-green">history</a>
-<a href="#the artists" class="w3-bar-item w3-button w3-hover-text-green">the artists</a>
-<a href="#all signs" class="w3-bar-item w3-button w3-hover-text-green">all signs</a>
-<a href="#how it's made" class="w3-bar-item w3-button w3-hover-text-green">how it's made</a>
-<a href="#your submission" class="w3-bar-item w3-button w3-hover-text-green">your submissions</a>
+<a href="#home" class="w3-bar-item w3-button:hover w3-hover-text-green">menu</a>
+<a href="#history" class="w3-bar-item w3-hover-text-green">history</a>
+<a href="#the artists" class="w3-bar-item w3-hover-text-green">the artists</a>
+<a href="#all signs" class="w3-bar-item w3-hover-text-green">all signs</a>
+<a href="#how it's made" class="w3-bar-item w3-hover-text-green">how it's made</a>
+<a href="#your submissions" class="w3-bar-item w3-hover-text-green">your submissions</a>
 
 </div>
 </div>
 
 <!-- Image in Display Container/Homepage hero image -->
 
-<div class="w3-display-container w3-content" style="max-width:1500px;">
-<img class="w3-image" src="images/Rio Theater Sign2.png"width="100%">
-<div class="w3-display-topleftinset">
-<img class="w3-image" src="images/SCSA Logo.png" width="30%">
-</h1>
-</div>
-</div>
+<div class="w3-content" style="max-width:1500px;">
+  <img class="w3-image" src="images/Rio Theater Sign2.png"width="100%">
+  </div>
 
 <!-- Homepage End -->
 </div>
@@ -295,37 +250,31 @@ tr:nth-child(even) {
 <br>
 <br>
 <!-- Slideshow Gallery -->
-<h2 style="text-align:left">Slideshow Gallery</h2>
+<p id="your submissions">
+<h1>Browse Signs</h1>
 
-<div class="container">
   <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-    <img src="images/Pleasure Point Motel NO VACANCY EVER.jpg" style="width:100%">
+  <img src="images/Pleasure Point Motel SQ.jpg" style="width:50%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-    <img src="images/Trailer Haven.jpg" style="width:100%">
+    <img src="images/Trailer Haven SQ.jpg" style="width:50%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
-    <img src="images/Scopazzi's Sign.jpg" style="width:100%">
+    <img src="images/Scopazzi's Sign SQ.jpg" style="width:50%">
   </div>
     
   <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
-    <img src="images/Rio Theater Sign edited.jpg" style="width:100%">
+    <img src="images/Rio Theater Sign SQ.jpg" style="width:50%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
-    <img src="images/Scarborough Lumber Sign.JPG" style="width:100%">
+    <img src="images/Scarborough Lumber Sign SQ.jpg" style="width:50%">
   </div>
     
   <div class="mySlides">
-    <div class="numbertext">6 / 6</div>
-    <img src="images/Las Palmas Sign.jpg" style="width:100%">
+    <img src="images/Las Palmas Sign SQ.jpg" style="width:50%">
   </div>
     
   <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -337,57 +286,33 @@ tr:nth-child(even) {
 
   <div class="row">
     <div class="column">
-      <img class="demo cursor" src="images/Pleasure Point Motel NO VACANCY EVER.jpg" style="width:100%" onclick="currentSlide(1)" alt="No Vacancy EVER">
-    </div>
+      <img class="demo cursor" src="images/Pleasure Point Motel SQ.jpg" style="width:100%" onclick="currentSlide(1)" alt="Pleasure Point Motel">
+      <h4>Pleasure Point Motel</h4> </div>
     <div class="column">
-      <img class="demo cursor" src="images/Trailer Haven.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-    </div>
+      <img class="demo cursor" src="images/Trailer Haven SQ.jpg" style="width:100%" onclick="currentSlide(2)" alt="Trailer Haven">
+      <h4>Trailer Haven</h4> </div>
     <div class="column">
-      <img class="demo cursor" src="images/Scopazzi's Sign.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-    </div>
+      <img class="demo cursor" src="images/Scopazzi's Sign SQ.jpg" style="width:100%" onclick="currentSlide(3)" alt="Scopazzi's">
+      <h4>Scopazzi's</h4> </div>
     <div class="column">
-      <img class="demo cursor" src="images/Rio Theater Sign edited.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-    </div>
+      <img class="demo cursor" src="images/Rio Theater Sign SQ.jpg" style="width:100%" onclick="currentSlide(4)" alt="Rio Theater">
+      <h4>Rio Theater</h4> </div>
     <div class="column">
-      <img class="demo cursor" src="images/Scarborough Lumber Sign.JPG" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-    </div>    
+      <img class="demo cursor" src="images/Scarborough Lumber Sign SQ.jpg" style="width:100%" onclick="currentSlide(5)" alt="Scarborough Lumber">
+      <h4>Scarborough Lumber</h4> </div>    
     <div class="column">
-      <img class="demo cursor" src="images/Las Palmas Sign.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-    </div>
+      <img class="demo cursor" src="images/Las Palmas Sign SQ.jpg" style="width:100%" onclick="currentSlide(6)" alt="Las Palmas">
+      <h4>Las Palmas</h4> </div>
   </div>
 </div>
 
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-</script>
 
+<!-- Sortable table -->
+<p id="all signs">
+<h1>All Signs</h1>
 <p>Click the button to sort the table alphabetically, by name:</p>
 <p><button onclick="sortTable()">Sort</button></p>
 
@@ -402,56 +327,56 @@ function showSlides(n) {
     <th>Notes</th>
   </tr>
   <tr>
-    <td><img class="document" src="images/Scarborough Lumber Sign.JPG" style="max-height: 200px;"></td>
+    <td><img class="document" src="images/Scarborough Lumber Sign SQ.jpg" style="max-height: 200px;"></td>
     <td>Scarborough Lumber</td>
     <td>Boulder Creek</td>
     <td>Hand-Painted</td>
     <td></td>
   </tr>
   <tr>
-    <td><img class="document" src="images/Rio Theater Sign.png" style="max-height: 200px;"></td>
+    <td><img class="document" src="images/Rio Theater Sign SQ.jpg" style="max-height: 200px;"></td>
     <td>Rio Theater</td>
     <td>Midtown, Santa Cruz</td>
     <td>Neon</td>
     <td></td>
   </tr>
   <tr>
-    <td><img class="document" src="images/Bad Animal Hanloh Thai.jpg" style="max-height: 200px;"></td>
+    <td><img class="document" src="images/Bad Animal Hanloh Thai SQ.jpg" style="max-height: 200px;"></td>
     <td>Bad Animal/Hanloh Thai</td>
     <td>Downtown, Santa Cruz</td>
     <td>Mural</td>
     <td></td>
   </tr>
   <tr>
-    <td><img class="document" src="images/Bee Clene Sign.jpg" style="max-height: 200px;"></td>
+    <td><img class="document" src="images/Bee Clene Sign SQ.jpg" style="max-height: 200px;"></td>
     <td>Bee-Clene</td>
     <td>Live Oak, Santa Cruz</td>
     <td>Hand-Painted</td>
     <td></td>
   </tr>
   <tr>
-    <td><img class="document" src="images/Blowout Surf Shack.jpg" style="max-height: 200px;"></td>
+    <td><img class="document" src="images/Blowout Surf Shack SQ.jpg" style="max-height: 200px;"></td>
     <td>Blowout Surf Shack</td>
     <td>Live Oak, Santa Cruz</td>
     <td>Hand-Painted</td>
     <td></td>
   </tr>
   <tr>
-    <td><img class="document" src="images/Dream Inn Sign.JPG" style="max-height: 200px;"></td>
+    <td><img class="document" src="images/Dream Inn Sign SQ.jpg" style="max-height: 200px;"></td>
     <td>Dream Inn</td>
     <td>Beach Boardwalk, Santa Cruz</td>
     <td>Neon</td>
     <td></td>
   </tr>
   <tr>
-    <td><img class="document" src="images/Fonda Felix Sign.jpg" style="max-height: 200px;"></td>
+    <td><img class="document" src="images/Fonda Felix Sign SQ.jpg" style="max-height: 200px;"></td>
     <td>Fonda Felix</td>
     <td>West Side, Santa Cruz</td>
     <td>Hand-Painted</td>
     <td></td>
   </tr>
   <tr>
-    <td><img class="document" src="images/Johnnie's Sign.jpg" style="max-height: 200px;"></td>
+    <td><img class="document" src="images/Johnnie's Sign SQ.jpg" style="max-height: 200px;"></td>
     <td>Johnnie's Super</td>
     <td>Boulder Creek, California</td>
     <td>Neon</td>
@@ -460,7 +385,81 @@ function showSlides(n) {
 </table>
 </div>
 
+<br>
+<br>
+<p id="history"></p>
+<h1>History of Signs</h1>
+<div class="scrollable-box" >
+  The history of sign-making in the United States is a story that spans centuries, evolving from hand-painted messages to the advanced digital signs we see today. Early American signs were simple and functional, often hand-lettered and painted on wood or metal. These signs primarily served the purpose of indicating businesses, inns, and trade services. As European settlers arrived in the New World, they brought with them the tradition of creating signs that communicated essential information to a largely illiterate population. In the 18th century, for instance, shop signs featuring images of the goods or services offered were common, such as a barrel for a tavern or a pair of shoes for a cobbler.
+  <br><br>
+In the 19th century, the industrial revolution dramatically changed the sign-making industry. As cities grew and new businesses emerged, the demand for advertising signs increased. The development of new materials such as glass, tin, and later, neon, enabled more creativity and larger-scale advertising. During this time, hand-painted signs became increasingly popular, and specialized sign-making techniques, including gold leafing and embossing, were developed. The rise of printed signage in the late 19th and early 20th centuries also led to the creation of the modern advertising industry. Companies such as Coca-Cola and Ford pioneered new ways to use signs for mass marketing, and this led to the growth of national brands and consumer culture.
+<br><br>
+The mid-20th century brought the advent of neon signs, which were often used in commercial districts and became iconic in American cities like Las Vegas. Neon was particularly influential in transforming the landscape of American entertainment and advertising, as it illuminated streets and buildings with bright, eye-catching colors. By the 1960s and 1970s, sign-making began incorporating more sophisticated materials such as plastic and vinyl, allowing for more durable and cost-effective options. Additionally, with the rise of digital technology in the late 20th century, electronic signs and billboards entered the market. Digital technology revolutionized sign-making by allowing for signs to display changing images, dynamic content, and interactive elements.
+<br><br>
+Today, sign-making is an advanced industry that combines art, design, and technology. From large-scale billboards to small storefront signs, the evolution of signage reflects broader trends in advertising, communication, and urban development. With the rise of digital signage, signs are now more versatile than ever, displaying dynamic content in real-time, and offering new ways for businesses to engage with customers. The history of sign-making in the U.S. is a testament to both the creativity of artisans and the ongoing technological innovations that continue to shape the way businesses communicate with the public.
+</div>
 
+
+<p id="how it's made"></p>
+<section>
+  <div class="flex-container">
+    <!-- start with 1 video and add more to watch the alignment of flex display -->
+    <!-- type html/css code here -->
+    <div style="width: 45%; word-wrap:">
+      <h2>Sign Painting 101</h1>
+      <iframe
+        width="100%"
+        height="400"
+        src="https://www.youtube.com/embed/yaVkjmu76n8?si=Ir8rImJ5TUwAzZCT"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay; encrypted-media;"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div style="width: 45%; word-wrap: break-word">
+      <h2>Sign of the Times</h1>
+      <iframe
+        width="100%"
+        height="400"
+        src="https://www.youtube.com/embed/r_pLeFoASOs?si=hxrEZu7npt3elhsH"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay; encrypted-media;"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div style="width: 45%; word-wrap: break-word">
+      <h2>Neon Signmaking</h1>
+      <iframe
+        width="100%"
+        height="400"
+        src="https://www.youtube.com/embed/JYoqhRNg8gM?si=CNPTyLdVQ8o3Fteu"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay; encrypted-media;"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div style="width: 45%; word-wrap: break-word">
+      <h2>The Museum of Neon Art</h1>
+      <iframe
+        width="100%"
+        height="400"
+        src="https://www.youtube.com/embed/p29HMsJ2i7o?si=LU5u5sBcbDCHgljw"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay; encrypted-media;"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+  
+</section>
+
+<!-- Java Script for table filter button -->
 <script>
 function sortTable() {
   var table, rows, switching, i, x, y, shouldSwitch;
@@ -498,13 +497,39 @@ function sortTable() {
 }
 </script>
 
-<br>
-<br>
-<br>
-<br>
-<div class="scrollable-box" >
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce congue, elit in aliquet lobortis, urna elit condimentum quam, quis blandit velit felis ac nunc. Aenean et tortor at risus blandit adipiscing. Curabitur adipiscing ligula non felis placerat, ut dapibus lectus volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce congue, elit in aliquet lobortis, urna elit condimentum quam, quis blandit velit felis ac nunc. Aenean et tortor at risus blandit adipiscing. Curabitur adipiscing ligula non felis placerat, ut dapibus lectus volutpat.
-</div>
+<!-- Javascript that makes the images change in the slideshow gallery thing -->
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+
+
 
 </body>
 </html>
