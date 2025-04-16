@@ -14,17 +14,9 @@
     />
 <link rel="stylesheet" href="css/SCSAcss.css">
 
-<title>YouTube Video</title>
+<title>Santa Cruz Sign Archive</title>
 
 <style>
-
-   .flex-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
-        padding: 0;
-      }
 
 /* customize <a> tag styles - determining colors of nav text?*/
   a {
@@ -65,29 +57,6 @@
 }
 
 
-/* Next & previous buttons */
-.prev
-.next {
-  cursor: arrow;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: 50px;
-  color: white;
-  font-weight: bold;
-  font-size: 40px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* On hover, make next and back buttons black */
-.prev:hover,
-.next:hover {
-  color: rgb(0, 0, 0);
-}
-
 
 /* Number text (1/3 etc) */
 .numbertext {
@@ -114,16 +83,37 @@
   float: left;
   vertical-align: bottom;
   padding-left: 15px;
-  padding-top: 5px;
+  padding-top: 15px;
   padding-bottom: 15px;
-  display: flex;
+  display: fixed;
   color: white;
+}
+
+.logo-container2{
+  align-items: center;
+  float: left;
+  vertical-align: bottom;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: auto;
+  color: white;
+}
+
+.image2 {
+    max-width: 50px;
+    background-color: none;
+}
+
+.image3 {
+    max-width: 200px;
 }
 
 
 /* Container for slideshow image */
 .image-container-slideshow{
   position: center;
+  width: 100%;
   vertical-align: center;
   color: white
 }
@@ -137,7 +127,7 @@
 /* Six columns side by side */
 .column {
   float: left; padding: 5px;
-  width: 10%;
+  width: 15.72%;
 }
 
 /* Add a transparency effect for thumnbail images */
@@ -152,30 +142,8 @@
 
 .slideshowtest {
   right: 0;
+  width: 100%;
   border-radius: 3px 0 0 3px;
-}
-
-table {
-  border-spacing: 0;
-  width: auto;
-  border: 10px solid #ddd;
-}
-
-/* aligning text in the table */
-th, td {
-  text-align: left;
-  padding: 16px;
-}
-
-/* background color of every other row in table */
-tr:nth-child(even) {
-  background-color: #ffffff
-}
-
-/* background color of every other row in table */
-.idk{
-  background-color: black;
-  font-family: cursive;
 }
 
 .glow {
@@ -186,350 +154,615 @@ tr:nth-child(even) {
 }
 
 .scrollable-box {
-            width: 40%;        /* Set the width of the box */
-            height: 175px;       /* Set the height of the box */
+            width: auto;        /* Set the width of the box */
+            height: 100px;       /* Set the height of the box */
             overflow-y: scroll;  /* Enable vertical scrolling */
-            border: 10px solid #ffffff; /* Border around the box */
-            background-color: #1e9cbb;
-            color: rgb(255, 255, 255);
-            padding: 20px;       /* Padding inside the box */
-            position: static;
+            border: 0px solid #000000; /* Border around the box */
+            background-color: #f1f1f1;
+            color: rgb(0, 0, 0);
+            padding: 15px;       /* Padding inside the box */
+            margin: 0px
         }
+
+.two-column-layout {
+  display: grid;
+  gap: 60px;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  grid-template-columns: 1fr 1fr
+}
+
+.one-column-layout {
+  display: grid;
+  gap: 60px;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  grid-template-columns: 1fr
+}
+
+.one-column-layout2 {
+  display: grid;
+  gap: 60px;
+  padding-top: 50px;
+  padding-left: 500px;
+  padding-right: 500px;
+  grid-template-columns: 1fr
+}
+
+.four-column-layout1 {
+  display: grid;
+  gap: 60px;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  grid-template-columns: 3fr 1fr
+}
+
+.image-container2 {
+  position: relative; /* Required for absolute positioning of child elements */
+  size: auto;
+  z-index: 5
+}
+
+.background-image {
+  width: 100%; /* Ensures the image fills the container */
+  height: 100%; /* Ensures the image fills the container */
+}
+
+.logo {
+  position: fixed; /* Positions the logo relative to its closest positioned ancestor (the image-container) */
+  top: 100px;         /* Adjust as needed to place the logo */
+  left: 20px;        /* Adjust as needed to place the logo */
+  width: 300px;
+  z-index: 1;
+  /* Additional styling for the logo can be added here (e.g., z-index to control stacking order) */
+}
+
+.logo3 {
+  position: absolute; /* Positions the logo relative to its closest positioned ancestor (the image-container) */
+  top: 70px;         /* Adjust as needed to place the logo */
+  left: 20px;        /* Adjust as needed to place the logo */
+  width: 350px;
+  z-index: 1;
+  /* Additional styling for the logo can be added here (e.g., z-index to control stacking order) */
+}
+
+table {
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th {
+  cursor: pointer;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
 </style>
-
 </head>
-
-
 <body>
-
   
 <!-- Navbar (Sits on top) - includes my shopping basket + search icon -->
-<div class="w3-bar w3-blackblue">
+<nav>
+<section>
+<div class="navbar w3-bar topNav">
 
-  <div>
-
-    <a class="w3-padding-large w3-right"
+    <a class="w3-bar-item w3-right"
       ><i class="fa fa-shopping-basket"></i
     ></a>
     
-    <a class="w3-padding-large w3-hide-small w3-right"
+    <a class="w3-bar-item w3-right"
       ><i class="fa fa-search"></i>
     </a>
-    <img class="logo-container" src="images/SCSA Logo Blue2.png" width="25%">
-
-
-    <div>
    
-  </div>
+<div class="w3-hide-small">
+  <a href="#all signs" class="w3-bar-item w3-hover-text-green">all signs</a>
+  <a href="#your submissions" class="w3-bar-item w3-hover-text-green">your submissions</a>
+  <a href="#history" class="w3-bar-item w3-hover-text-green">history</a>
+  <a href="#the makers" class="w3-bar-item w3-hover-text-green">the makers</a>
+  <a href="#how it's made" class="w3-bar-item w3-hover-text-green">how it's made</a>
+  <a href="#home" class="w3-bar-item w3-hover-text-green">menu</a>
 
-  
 
-<!-- Float links to the right. Hide them on small screens -->
-<div class="w3-right w3-hide-small">
-<a href="#home" class="w3-bar-item w3-button:hover w3-hover-text-green">menu</a>
-<a href="#history" class="w3-bar-item w3-hover-text-green">history</a>
-<a href="#the artists" class="w3-bar-item w3-hover-text-green">the artists</a>
-<a href="#all signs" class="w3-bar-item w3-hover-text-green">all signs</a>
-<a href="#how it's made" class="w3-bar-item w3-hover-text-green">how it's made</a>
-<a href="#your submissions" class="w3-bar-item w3-hover-text-green">your submissions</a>
+
 
 </div>
-</div>
 
-<!-- Image in Display Container/Homepage hero image -->
-
-<div class="w3-content" style="max-width:1500px;">
-  <img class="w3-image" src="images/Rio Theater Sign2.png"width="100%">
-  </div>
-
-<!-- Homepage End -->
-</div>
-
+</section>
+<p id="home"></p>
 <br>
-<br>
-<br>
-<br>
-<!-- Slideshow Gallery -->
-<p id="your submissions">
-<h1>Browse Signs</h1>
 
-  <div class="mySlides">
-  <img src="images/Pleasure Point Motel SQ.jpg" style="width:50%">
-  </div>
-
-  <div class="mySlides">
-    <img src="images/Trailer Haven SQ.jpg" style="width:50%">
-  </div>
-
-  <div class="mySlides">
-    <img src="images/Scopazzi's Sign SQ.jpg" style="width:50%">
-  </div>
-    
-  <div class="mySlides">
-    <img src="images/Rio Theater Sign SQ.jpg" style="width:50%">
-  </div>
-
-  <div class="mySlides">
-    <img src="images/Scarborough Lumber Sign SQ.jpg" style="width:50%">
-  </div>
-    
-  <div class="mySlides">
-    <img src="images/Las Palmas Sign SQ.jpg" style="width:50%">
-  </div>
-    
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
-
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
-
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="images/Pleasure Point Motel SQ.jpg" style="width:100%" onclick="currentSlide(1)" alt="Pleasure Point Motel">
-      <h4>Pleasure Point Motel</h4> </div>
-    <div class="column">
-      <img class="demo cursor" src="images/Trailer Haven SQ.jpg" style="width:100%" onclick="currentSlide(2)" alt="Trailer Haven">
-      <h4>Trailer Haven</h4> </div>
-    <div class="column">
-      <img class="demo cursor" src="images/Scopazzi's Sign SQ.jpg" style="width:100%" onclick="currentSlide(3)" alt="Scopazzi's">
-      <h4>Scopazzi's</h4> </div>
-    <div class="column">
-      <img class="demo cursor" src="images/Rio Theater Sign SQ.jpg" style="width:100%" onclick="currentSlide(4)" alt="Rio Theater">
-      <h4>Rio Theater</h4> </div>
-    <div class="column">
-      <img class="demo cursor" src="images/Scarborough Lumber Sign SQ.jpg" style="width:100%" onclick="currentSlide(5)" alt="Scarborough Lumber">
-      <h4>Scarborough Lumber</h4> </div>    
-    <div class="column">
-      <img class="demo cursor" src="images/Las Palmas Sign SQ.jpg" style="width:100%" onclick="currentSlide(6)" alt="Las Palmas">
-      <h4>Las Palmas</h4> </div>
-  </div>
-</div>
-
-
-
-
-
-<!-- Sortable table -->
-<p id="all signs">
-<h1>All Signs</h1>
-<p>Click the button to sort the table alphabetically, by name:</p>
-<p><button onclick="sortTable()">Sort</button></p>
-
-<div style="overflow-x:auto;">
-
-<table id="myTable">
-  <tr>
-    <th>Image</th>
-    <th>Business Name</th>
-    <th>Location</th>
-    <th>Sign Type</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td><img class="document" src="images/Scarborough Lumber Sign SQ.jpg" style="max-height: 200px;"></td>
-    <td>Scarborough Lumber</td>
-    <td>Boulder Creek</td>
-    <td>Hand-Painted</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><img class="document" src="images/Rio Theater Sign SQ.jpg" style="max-height: 200px;"></td>
-    <td>Rio Theater</td>
-    <td>Midtown, Santa Cruz</td>
-    <td>Neon</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><img class="document" src="images/Bad Animal Hanloh Thai SQ.jpg" style="max-height: 200px;"></td>
-    <td>Bad Animal/Hanloh Thai</td>
-    <td>Downtown, Santa Cruz</td>
-    <td>Mural</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><img class="document" src="images/Bee Clene Sign SQ.jpg" style="max-height: 200px;"></td>
-    <td>Bee-Clene</td>
-    <td>Live Oak, Santa Cruz</td>
-    <td>Hand-Painted</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><img class="document" src="images/Blowout Surf Shack SQ.jpg" style="max-height: 200px;"></td>
-    <td>Blowout Surf Shack</td>
-    <td>Live Oak, Santa Cruz</td>
-    <td>Hand-Painted</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><img class="document" src="images/Dream Inn Sign SQ.jpg" style="max-height: 200px;"></td>
-    <td>Dream Inn</td>
-    <td>Beach Boardwalk, Santa Cruz</td>
-    <td>Neon</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><img class="document" src="images/Fonda Felix Sign SQ.jpg" style="max-height: 200px;"></td>
-    <td>Fonda Felix</td>
-    <td>West Side, Santa Cruz</td>
-    <td>Hand-Painted</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><img class="document" src="images/Johnnie's Sign SQ.jpg" style="max-height: 200px;"></td>
-    <td>Johnnie's Super</td>
-    <td>Boulder Creek, California</td>
-    <td>Neon</td>
-    <td></td>
-  </tr>
-</table>
-</div>
-
-<br>
-<br>
-<p id="history"></p>
-<h1>History of Signs</h1>
-<div class="scrollable-box" >
-  The history of sign-making in the United States is a story that spans centuries, evolving from hand-painted messages to the advanced digital signs we see today. Early American signs were simple and functional, often hand-lettered and painted on wood or metal. These signs primarily served the purpose of indicating businesses, inns, and trade services. As European settlers arrived in the New World, they brought with them the tradition of creating signs that communicated essential information to a largely illiterate population. In the 18th century, for instance, shop signs featuring images of the goods or services offered were common, such as a barrel for a tavern or a pair of shoes for a cobbler.
-  <br><br>
-In the 19th century, the industrial revolution dramatically changed the sign-making industry. As cities grew and new businesses emerged, the demand for advertising signs increased. The development of new materials such as glass, tin, and later, neon, enabled more creativity and larger-scale advertising. During this time, hand-painted signs became increasingly popular, and specialized sign-making techniques, including gold leafing and embossing, were developed. The rise of printed signage in the late 19th and early 20th centuries also led to the creation of the modern advertising industry. Companies such as Coca-Cola and Ford pioneered new ways to use signs for mass marketing, and this led to the growth of national brands and consumer culture.
-<br><br>
-The mid-20th century brought the advent of neon signs, which were often used in commercial districts and became iconic in American cities like Las Vegas. Neon was particularly influential in transforming the landscape of American entertainment and advertising, as it illuminated streets and buildings with bright, eye-catching colors. By the 1960s and 1970s, sign-making began incorporating more sophisticated materials such as plastic and vinyl, allowing for more durable and cost-effective options. Additionally, with the rise of digital technology in the late 20th century, electronic signs and billboards entered the market. Digital technology revolutionized sign-making by allowing for signs to display changing images, dynamic content, and interactive elements.
-<br><br>
-Today, sign-making is an advanced industry that combines art, design, and technology. From large-scale billboards to small storefront signs, the evolution of signage reflects broader trends in advertising, communication, and urban development. With the rise of digital signage, signs are now more versatile than ever, displaying dynamic content in real-time, and offering new ways for businesses to engage with customers. The history of sign-making in the U.S. is a testament to both the creativity of artisans and the ongoing technological innovations that continue to shape the way businesses communicate with the public.
-</div>
-
-
-<p id="how it's made"></p>
 <section>
-  <div class="flex-container">
-    <!-- start with 1 video and add more to watch the alignment of flex display -->
-    <!-- type html/css code here -->
-    <div style="width: 45%;">
-      <h2>Sign Painting 101</h1>
+  
+  <div class="image-container2">
+    <img src="images/Rio Theater Sign3.png" alt="Background Image" class="background-image">
+    <img src="images/SCSA Logo.png" alt="Santa Cruz Sign Archive Logo" class="logo3">
+  </div>
+  
+  </section>  
+</div>
+
+
+<section>
+
+  <div class="one-column-layout">
+    <p id="your submissions"></p>
+      <h1>Your Submissions</h1>
+
+  <div class="grid">
+    <img src="images/Bad_Animal_Sq.jpg" alt="Image 1" onclick="openLightbox('images/Bad_Animal_Sq.jpg')">
+    <img src="images/Bee_Clene_SQ.jpg" alt="Image 2" onclick="openLightbox('images/Bee_Clene_SQ.jpg')">
+    <img src="images/Blowout Surf Shack SQ.jpg" alt="Image 3" onclick="openLightbox('images/Blowout Surf Shack SQ.jpg')">
+    <img src="images/Dream Inn Sign SQ.jpg" alt="Image 4" onclick="openLightbox('images/Dream Inn Sign SQ.jpg')">
+    <img src="images/Fonda Felix Sign SQ.jpg" alt="Image 5" onclick="openLightbox('images/Fonda Felix Sign SQ.jpg')">
+    <img src="images/Johnnies Sign SQ.jpg" alt="Image 6" onclick="openLightbox('images/Johnnies Sign SQ.jpg')">
+    <img src="images/Las Palmas Sign SQ.jpg" alt="Image 5" onclick="openLightbox('images/Las Palmas Sign SQ.jpg')">
+    <img src="images/Pleasure Point Motel SQ.jpg" alt="Image 6" onclick="openLightbox('images/Pleasure Point Motel SQ.jpg')">
+    <img src="images/Pong A Palooza SQ.jpg" alt="Image 5" onclick="openLightbox('images/Pong A Palooza SQ.jpg')">
+    <img src="images/Rio Theater Sign SQ.jpg" alt="Image 6" onclick="openLightbox('images/Rio Theater Sign SQ.jpg')">
+  </div>
+  
+  <div id="lightbox">
+    <img src="" id="lightboxImg">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+  </div>
+
+</div>
+</section>
+
+
+<section>
+<p id="how it's made"></p>
+
+<br>
+<div class="one-column-layout">
+  <h1>How It's Made</h1>
+</div>
+  
+  <div class="two-column-layout">
+    <div>
+    
+      <h2>Sign Painting 101</h2>
       <iframe
         width="100%"
-        height="400"
+        height="300"
         src="https://www.youtube.com/embed/yaVkjmu76n8?si=Ir8rImJ5TUwAzZCT"
         title="YouTube video player"
         frameborder="0"
         allow="autoplay; encrypted-media;"
         allowfullscreen
       ></iframe>
+      <div>
+        <div class="scrollable-box" >
+          "Sign Painting 101" is a captivating introduction to the timeless art of hand-painted signs, offering beginners and enthusiasts a look into the foundations of this traditional craft. The video walks viewers through the basic tools, materials, and techniques needed to get started—covering everything from brush handling and paint consistency to layout tips and lettering styles.
+<br><br>
+          As the instructor demonstrates each step, the video emphasizes the value of patience, precision, and practice. You'll learn how to prepare surfaces, sketch letterforms, and apply paint with steady strokes to create clean, consistent lines. Whether you're aiming to make your first shop sign or simply curious about the process, this video makes the craft approachable and inspiring.
+          <br><br>  
+          Beyond technique, "Sign Painting 101" also touches on the history and culture behind the craft—highlighting how this analog art form continues to thrive in a digital age. With its blend of practical instruction and artistic insight, the video serves as both a how-to guide and a tribute to the enduring beauty of hand lettering. It’s perfect for artists, makers, and anyone drawn to creative, hands-on expression.
+        </div>
     </div>
+  </div>
 
-    <div style="width: 45%; word-wrap: break-word">
-      <h2>Sign of the Times</h1>
+ <div>
+      <h2>Contemporary Sign Painting</h2>
       <iframe
         width="100%"
-        height="400"
-        src="https://www.youtube.com/embed/r_pLeFoASOs?si=hxrEZu7npt3elhsH"
+        height="300"
+        src="https://youtube.com/embed/Un32Iz3rgxo?si=_xrlAZHR-dEiHPqj"
         title="YouTube video player"
         frameborder="0"
         allow="autoplay; encrypted-media;"
         allowfullscreen
       ></iframe>
+      <div>
+        <div class="scrollable-box" >"Sign Painting" offers an insightful exploration into the world of sign making, highlighting the artistry and craftsmanship involved in creating iconic signage. The video delves into the intricate processes of hand-painting and gilding, showcasing the meticulous attention to detail that transforms a simple sign into a work of art. Viewers are introduced to the tools and techniques used by skilled sign makers, providing a behind-the-scenes look at this often-overlooked craft.​
+<br><br>
+Through interviews with experienced sign makers, the video emphasizes the significance of signage in shaping the identity of a community. It highlights how signs not only serve functional purposes but also contribute to the aesthetic and cultural fabric of a place. The video also touches upon the resurgence of interest in traditional sign-making methods, as people seek authenticity and uniqueness in an increasingly digital world.​
+<br><br>
+Overall, "Sign of the Times" is a celebration of the enduring appeal of handcrafted signage. It serves as a reminder of the importance of preserving traditional crafts and the stories they tell about our communities and histories. The video is a must-watch for anyone interested in design, craftsmanship, or the cultural significance of signage.​
+      </div>
     </div>
-    <div style="width: 45%; word-wrap: break-word">
-      <h2>Neon Signmaking</h1>
+    </div>
+  <div>
+      <h2>Neon Signmaking</h2>
       <iframe
         width="100%"
-        height="400"
+        height="300px"
         src="https://www.youtube.com/embed/JYoqhRNg8gM?si=CNPTyLdVQ8o3Fteu"
         title="YouTube video player"
         frameborder="0"
         allow="autoplay; encrypted-media;"
         allowfullscreen
       ></iframe>
+      <div>
+        <div class="scrollable-box">
+          "How to Make Neon Signs" takes viewers behind the glow to reveal the fascinating process of crafting custom neon signage. From bending glass tubes over an open flame to filling them with noble gases, this video offers a rare, up-close look at a craft that blends science, art, and serious hands-on skill. It's a deep dive into a luminous tradition that continues to shine bright in the age of LEDs.
+          <br><br>
+          The video walks through each stage of the process, starting with design and layout, then moving into tube bending, electrode attachment, gas filling, and final wiring. As the artist explains each step, you'll gain insight into the tools of the trade and the precision required to create those smooth curves and glowing lines. It's a process that requires a steady hand, a practiced eye, and a lot of heat—literally.
+          <br><br>  
+          More than just a tutorial, "How to Make Neon Signs" celebrates the legacy and resilience of neon artistry. It honors the makers who keep the flame alive and reminds us why real neon—buzzing, flickering, and handmade—still holds such a unique place in signage and visual culture. Whether you're a designer, DIY enthusiast, or neon lover, this video is pure eye candy with substance behind the shine.
+        </div>
+    </div>
     </div>
 
-    <div style="width: 45%; word-wrap: break-word">
-      <h2>The Museum of Neon Art</h1>
+    <div>
+      <h2>Museum of Neon Art</h2>
       <iframe
         width="100%"
-        height="400"
+        height="300px"
         src="https://www.youtube.com/embed/p29HMsJ2i7o?si=LU5u5sBcbDCHgljw"
         title="YouTube video player"
         frameborder="0"
         allow="autoplay; encrypted-media;"
         allowfullscreen
       ></iframe>
-    </div>
+      <div>
+        <div class="scrollable-box" >
+          "The Museum of Neon Art in Los Angeles" offers an illuminating journey into the vibrant world of neon signage and light-based art. Located in Glendale, California, this unique museum showcases a rich collection of historic neon signs, kinetic sculptures, and electric artworks that illuminate the cultural tapestry of Los Angeles.
+          <br><br>
+          The video delves into the museum's diverse exhibits, including pieces that narrate the stories of immigrants and entrepreneurs who utilized neon to attract customers, reflecting the city's dynamic history. Highlights include the iconic Brown Derby sign and the animated "Rugs" sign from Pasadena Rug Mart, each telling tales of a bygone era .
+          <br><br>
+          Beyond its exhibits, the museum plays a pivotal role in preserving this endangered craft through hands-on classes in neon bending and advocacy for the restoration of historic signage. It also offers guided tours, such as the Neon Night Walks and Neon Cruises, allowing visitors to experience the glowing legacy of Los Angeles firsthand .
+          <br><br>
+          Whether you're an art enthusiast, a history buff, or someone captivated by the glow of neon, this video provides a comprehensive look at the Museum of Neon Art and its mission to keep the glow alive for future generations.
 
-  
+</div>
+    </div>
+  </div>
 </section>
 
-<!-- Java Script for table filter button -->
+<section>
+<p id="the makers"></p>  
+  <div class="two-column-layout">
+
+    <div>
+<div class="slideshow-container">
+
+  <h1>The Makers</h1>
+<!-- Full-width images with number and caption text -->
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/Chris Ballas.jpg" style="width:100%">
+  <div><button class="accordion">Chris Ballas/Signs of Good Times</button>
+    <div class="panel">
+      <p>Sign maker Chris Ballas' art show during First Friday Santa Cruz earlier this month reminded me of two things - all the signage I saw cruising around town on my bike as a kid and a list of my adult vices including beer and tattoos. Adorning the walls of Rosie McCann's Irish Pub & Restaurant were hand painted signs from the young artist who values traditional hand lettering technique and exudes old school style.
+<br><br>
+        Merging art and function, Ballas' work is clean, simple, and approachable. His art showcases an attention to detail and honors classic craftsmanship. Not overworked nor complicated, his pieces are much more literal and still playful. With such a clear and creative point of view, Ballas is definitely an artist to keep an eye on!</p>
+    </div></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/Michelle Meng.jpg" style="width:100%">
+ <div><button class="accordion">Michelle 'Meng' Nguyen/Signs by Meng</button>
+<div class="panel">
+<p>Michelle “Meng” Nguyen is a Vietnamese American designer, illustrator, and sign painter, born and raised in San Francisco, California. 
+<br><br>
+  She enjoys working with various mediums and surfaces, welcoming the blend of traditional methods of sign painting with what modern technologies and tools can offer. She is influenced by the talent of her peers in the industry, vintage packaging design found at thrift stores, and hand painted signage from countless countries. She also finds inspiration through the community Tight Quarters bring — an art collective / workspace and gallery she co-runs with Orlie Kapitulnik, Amanda Durbin, and Jeffrey Larrimore in the Inner Sunset. 
+  <br><br>
+  In addition to personal work and private commissions, she thrives on working with small businesses all over the bay area.</p>
+</div></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/Juicebox.jpg" style="width:100%">
+  <div><button class="accordion">Kyle Johnson/Juicebox Sign Co.</button>
+    <div class="panel">
+      <p>JuiceBox Sign Co. is a sign shop founded by Kyle Johnson (JuiceBox) in Santa Cruz, California.  Specializing in hand  lettering, we offer a wide variety of services.  Commercial lettering, walls, gold leaf, paper signs, sho-cards, A-frame signs, and custom artwork and logo design; everything is designed by hand and unique to each job.  We reference a number of traditional sign publications as well as consulting some of the very best in the business and strive toward the future with our design.</p>
+    </div></div>
+</div>
+
+
+<!-- Next and previous buttons -->
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+</div>
+
+<div>
+  <p id="your submissions"></p>
+  <h3>The Makers</h3>
+    <p>The history of sign making in Santa Cruz and the greater Bay Area is a story deeply intertwined with the region’s cultural identity, artistic movements, and entrepreneurial spirit. From the quirky surf shops of the Santa Cruz boardwalk to the bustling neon glow of historic Oakland theaters, signage in this part of California has long served as both a functional necessity and a creative expression of place. Across decades, sign makers have helped shape the visual language of coastal towns and urban centers alike, turning everyday advertisements into works of art.</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+
+<div class="one-column-layout">
+  <p id="history"></p>
+    <h1>History of Sign Making</h1>
+  </div>
+<section>
+  <div class="two-column-layout">
+    <div>
+    <p>
+      <img
+        style="
+          float: left;
+          max-width: 300px;
+          padding-right: 15px;
+          padding-bottom: 10px;
+        "
+        src="images/gem saloon.jpg"
+        alt="1880s gem saloon"
+      />
+      The history of sign making in Santa Cruz and the greater Bay Area is a story deeply intertwined with the region’s cultural identity, artistic movements, and entrepreneurial spirit. From the quirky surf shops of the Santa Cruz boardwalk to the bustling neon glow of historic Oakland theaters, signage in this part of California has long served as both a functional necessity and a creative expression of place. Across decades, sign makers have helped shape the visual language of coastal towns and urban centers alike, turning everyday advertisements into works of art.
+    </p>
+    <p>
+      In the late 19th and early 20th centuries, as towns like Santa Cruz and San Jose grew into commercial and transportation hubs, the need for signage blossomed. Local businesses—from saloons and soda fountains to hotels and haberdasheries—commissioned hand-painted wooden signs to hang above their doors or in storefront windows. These early signs were often created by itinerant sign painters, known for their precise brushwork and ability to design letters by eye. Their tools were simple—mahl sticks, quills, and oil-based paints—but the results were highly personal and often beautifully detailed.
+    </p>
+    <h2>20's and 30's</h2>
+    <p>
+      As the automobile age took off in the 1920s and ’30s, signage in the Bay Area evolved along with the landscape. Highway 1 and Route 17 brought tourists through Santa Cruz and up into San Francisco, prompting businesses to invest in bolder, more visible signage. Neon signage became a defining visual element of the era. In San Francisco and Oakland, massive neon marquees lit up theater districts, while Santa Cruz saw an increase in bright, glowing signs advertising seafood restaurants, motels, and boardwalk amusements. The buzz of neon became a beacon for nightlife, entertainment, and local commerce throughout the region.
+      </p>
+      
+      <h2>Santa Cruz</h2>
+      <p>
+        Santa Cruz, with its strong surf and skate culture, developed a distinctive style of signage—casual, colorful, and hand-drawn. The beach-town vibe of Santa Cruz fostered a design language that was playful and bold, often influenced by comic art and DIY punk zine aesthetics.
+      </div>
+      <div>Local surf shops, cafes, and tattoo parlors used hand-painted signs and funky typography to set themselves apart, contributing to the eclectic character the town is known for today. Many of these businesses relied on local sign painters, some of whom developed reputations as artists in their own right.
+      </p>
+
+      <h2>Greater Bay Area</h2>
+      <p>
+        Throughout the Bay Area, and especially in San Francisco’s Mission District and Berkeley’s Telegraph Avenue, hand lettering maintained its relevance well into the late 20th century. Sign painters played a crucial role in shaping the visual personality of the region’s independent bookstores, record shops, taquerias, and coffee houses. These hand-crafted signs told stories—not just about what was being sold, but about the communities they represented. Even as vinyl and digital printing became more widespread in the 1980s and '90s, there remained a strong grassroots movement to preserve traditional craftsmanship and analog design.
+      </p>
+      <h2>Today</h2>
+      <p>
+        In recent years, that movement has only grown stronger. Across the Bay Area, a new generation of sign makers and lettering artists has emerged, blending old-school techniques with contemporary aesthetics. In Santa Cruz, businesses like Sign of the Times have become local institutions—bringing hand-painted signage back into the mainstream by celebrating its authenticity and charm. These studios not only produce signs for modern clients but also help preserve and restore historic signage, bridging the gap between eras.
+      </p>
+      <img
+        style="
+          float: left;
+          max-width: 300px;
+          padding-right: 15px;
+          padding-bottom: 10px;
+          padding-top: 10px
+        "
+        src="images/letterform archive.jpg"
+        alt="letterform archive"
+      />
+
+    </p>
+    <p>
+      Meanwhile, organizations such as the       
+      <a
+        style="color: #00a2ff; text-decoration: none"
+        href="https://letterformarchive.org/"
+        target="_blank"
+        >Letterform Archive</a
+      > in San Francisco and the      <a
+      style="color: #00a2ff; text-decoration: none"
+      href="https://www.neonmona.org/"
+      target="_blank"
+      >The Museum of Neon Art</a
+    > in nearby Los Angeles have helped elevate sign making to the realm of serious design and visual history. Local workshops, lettering classes, and public art initiatives have brought renewed appreciation for the hand-drawn letter and the artisan behind it. Even in the tech-driven heart of Silicon Valley, there's growing recognition that something handcrafted—especially in signage—carries emotional and cultural weight that digital design often lacks.
+      Today, the signs of Santa Cruz and the Bay Area are more than just directions or advertisements—they’re icons of place, memory, and identity. Whether it’s a faded ghost sign on a Mission Street wall, a retro neon diner light flickering in Oakland, or a freshly painted window in downtown Santa Cruz, each sign tells a story. These pieces of visual history remind us that even in a fast-changing world, there’s beauty in slowing down, picking up a brush, and making something that lasts.
+    </p>
+  </div>
+</div>
+
+
+
+<section>
+  <p id="all signs"></p>
+    <section>
+      <div class="one-column-layout">
+    <div>
+       
+        <!-- sortable table 1b -->
+        <h1>All Signs</h1>
+  
+      
+      <table id="myTable">
+        <tr>
+         <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+          <th onclick="sortTable(0)">Image</th>
+          <th onclick="sortTable(1)">Business Name</th>
+          <th onclick="sortTable(0)">Location</th>
+          <th onclick="sortTable(1)">Sign Type</th>
+        </tr>
+        <tr>
+          <td><img class="document" src="images/Scarborough Lumber Sign SQ.jpg" style="max-height: 200px;"></td>
+          <td>Scarborough Lumber</td>
+          <td>Boulder Creek</td>
+          <td>Hand-Painted</td>
+        </tr>
+        <tr>
+          <td><img class="document" src="images/Rio Theater Sign SQ.jpg" style="max-height: 200px;"></td>
+      <td>Rio Theater</td>
+      <td>Midtown, Santa Cruz</td>
+      <td>Neon</td>
+        </tr>
+        <tr>
+          <td><img class="document" src="images/Bad_Animal_Sq.jpg" style="max-height: 200px;"></td>
+      <td>Bad Animal/Hanloh Thai</td>
+      <td>Downtown, Santa Cruz</td>
+      <td>Mural</td>
+        </tr>
+        <tr>
+          <td><img class="document" src="images/Bee_Clene_Sq.jpg" style="max-height: 200px;"></td>
+      <td>Bee-Clene</td>
+      <td>Live Oak, Santa Cruz</td>
+      <td>Hand-Painted</td>
+        </tr>
+        <tr>
+          <td><img class="document" src="images/Blowout Surf Shack SQ.jpg" style="max-height: 200px;"></td>
+      <td>Blowout Surf Shack</td>
+      <td>Live Oak, Santa Cruz</td>
+      <td>Hand-Painted</td>
+        </tr>
+        <tr>
+          <td><img class="document" src="images/Dream Inn Sign SQ.jpg" style="max-height: 200px;"></td>
+      <td>Dream Inn</td>
+      <td>Beach Boardwalk, Santa Cruz</td>
+      <td>Neon</td>
+        </tr>
+        <tr>
+          <td><img class="document" src="images/Fonda Felix Sign SQ.jpg" style="max-height: 200px;"></td>
+      <td>Fonda Felix</td>
+      <td>West Side, Santa Cruz</td>
+      <td>Hand-Painted</td>
+  
+        </tr>
+        <tr>
+          <td><img class="document" src="images/Johnnies Sign SQ.jpg" style="max-height: 200px;"></td>
+          <td>Johnnie's Super</td>
+          <td>Boulder Creek, California</td>
+          <td>Neon</td>
+        </tr>
+      </table>
+  </div>
+  </section>
+  </section>
+  <br>
+  <br>
+  <br>
+  
+
+
+<!-- Javascript that makes the expandable text -->
 <script>
-function sortTable() {
-  var table, rows, switching, i, x, y, shouldSwitch;
-  table = document.getElementById("myTable");
-  switching = true;
-  /*Make a loop that will continue until
-  no switching has been done:*/
-  while (switching) {
-    //start by saying: no switching is done:
-    switching = false;
-    rows = table.rows;
-    /*Loop through all table rows (except the
-    first, which contains table headers):*/
-    for (i = 1; i < (rows.length - 1); i++) {
-      //start by saying there should be no switching:
-      shouldSwitch = false;
-      /*Get the two elements you want to compare,
-      one from current row and one from the next:*/
-      x = rows[i].getElementsByTagName("TD")[0];
-      y = rows[i + 1].getElementsByTagName("TD")[0];
-      //check if the two rows should switch place:
-      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-        //if so, mark as a switch and break the loop:
-        shouldSwitch = true;
-        break;
-      }
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
     }
-    if (shouldSwitch) {
-      /*If a switch has been marked, make the switch
-      and mark that a switch has been done:*/
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-    }
-  }
+  });
 }
+
+
 </script>
 
-<!-- Javascript that makes the images change in the slideshow gallery thing -->
 <script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
-  
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-  
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("demo");
-    let captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+  function sortTable(n) {
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    table = document.getElementById("myTable");
+    switching = true;
+    //Set the sorting direction to ascending:
+    dir = "asc"; 
+    /*Make a loop that will continue until
+    no switching has been done:*/
+    while (switching) {
+      //start by saying: no switching is done:
+      switching = false;
+      rows = table.rows;
+      /*Loop through all table rows (except the
+      first, which contains table headers):*/
+      for (i = 1; i < (rows.length - 1); i++) {
+        //start by saying there should be no switching:
+        shouldSwitch = false;
+        /*Get the two elements you want to compare,
+        one from current row and one from the next:*/
+        x = rows[i].getElementsByTagName("TD")[n];
+        y = rows[i + 1].getElementsByTagName("TD")[n];
+        /*check if the two rows should switch place,
+        based on the direction, asc or desc:*/
+        if (dir == "asc") {
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            //if so, mark as a switch and break the loop:
+            shouldSwitch= true;
+            break;
+          }
+        } else if (dir == "desc") {
+          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+            //if so, mark as a switch and break the loop:
+            shouldSwitch = true;
+            break;
+          }
+        }
+      }
+      if (shouldSwitch) {
+        /*If a switch has been marked, make the switch
+        and mark that a switch has been done:*/
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+        //Each time a switch is done, increase this count by 1:
+        switchcount ++;      
+      } else {
+        /*If no switching has been done AND the direction is "asc",
+        set the direction to "desc" and run the while loop again.*/
+        if (switchcount == 0 && dir == "asc") {
+          dir = "desc";
+          switching = true;
+        }
+      }
     }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
   }
   </script>
 
 
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<script>
+  function openLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    lightbox.style.display = 'block';
+    lightboxImg.src = src;
+  }
+  
+  function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
+  }
+  </script>
 
 </body>
 </html>

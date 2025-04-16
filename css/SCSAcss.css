@@ -1,6 +1,6 @@
 
 /* not sure if it does anything? */
-html,body{font-family:'Cairo', sans-serif;font-weight:normal; font-size:13px; line-height:1.5}html{overflow-x:fixed}
+html,body{font-family:'Cairo', sans-serif;font-weight:normal; font-size:13px; line-height:1.5;}html{overflow-x:fixed}
 
 /* ? */
 .w3-content{max-width:980px}.w3-auto{max-width:1140px}
@@ -12,16 +12,15 @@ html,body{font-family:'Cairo', sans-serif;font-weight:normal; font-size:13px; li
 .w3-display-slideshow{align-content: center;}
 
 /* is making nav text blue... */
-.w3-text-green,.w3-hover-text-green:hover{color:#1bfbff!important}
+.w3-text-green,.w3-hover-text-green:hover{color:#1bfbff}
 
 /* space between website links in nav bar */
-.w3-bar .w3-bar-item{padding: 0px 20px;float:left;vertical-align:bottom}
+.w3-bar .w3-bar-item{padding: 50px 40px 10px 0px;float:right}
 
-/* Seems to create space above the logo, tried adding to left and added to whole page */
-.w3-paddingSCSA{padding-top:0px;float:right;padding-left:0px; padding-bottom:5px}
+.w3-bar-item2{padding: 0px 0px 0ox 0px;float:right;vertical-align:bottom}
 
 /* created nice spacing for icons */
-.w3-padding-large{padding:12px 24px!important}
+.w3-padding-large{padding:0px 35px}
 
 /* Made icons go right */
 .w3-right{float:right;vertical-align:bottom}
@@ -30,9 +29,235 @@ html,body{font-family:'Cairo', sans-serif;font-weight:normal; font-size:13px; li
 .w3-left{float:left!important}
 
 /* Makes background black and... */
-.w3-blackblue,.w3-hover-black:hover{color:#c0c9da!important;background-color:#000!important}
+.w3-blackblue,.w3-hover-black:hover{color:#d8de3c;background-color:#c42f2f}
 
 /* Removes weird edges to frame etc */
 .w3-image{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}
 
-.w3-center{text-align:center!important}
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #eee;
+    color: #000000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #8d8d8d;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #000000;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 10;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    display: block;
+    color: #dcfff9;
+    text-align: center;
+    padding: 0px 0px;
+    text-decoration: none;
+  }
+  
+  /* Change nav link response on mouse-over */
+  .navbar a:hover {
+    background: none;
+    color: rgb(66, 252, 249);
+  }
+  
+  /* Main content */
+  .main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+  }
+  
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+
+  * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: hand;
+  position: auto;
+  bottom: 20%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(17, 17, 17);
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0px 3px 3px 0px;
+  user-select: none;
+  z-index: 9;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(118, 118, 118, 0);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 19px;
+}
+
+h3 {
+  font-size: 40px;
+  color:white
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0px;
+    padding: 0px;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.grid img:hover {
+    transform: scale(1.1);
+}
+
+/* Lightbox Styles */
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid white;
+}
+
+#lightbox .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 11;
+}
