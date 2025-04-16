@@ -206,6 +206,12 @@
   z-index: 5
 }
 
+.image-container3 {
+  position: auto; /* Required for absolute positioning of child elements */
+  width: 170px;
+  z-index: 5
+}
+
 .background-image {
   width: 100%; /* Ensures the image fills the container */
   height: 100%; /* Ensures the image fills the container */
@@ -221,6 +227,15 @@
 }
 
 .logo3 {
+  position: absolute; /* Positions the logo relative to its closest positioned ancestor (the image-container) */
+  top: 70px;         /* Adjust as needed to place the logo */
+  left: 20px;        /* Adjust as needed to place the logo */
+  width: 350px;
+  z-index: 1;
+  /* Additional styling for the logo can be added here (e.g., z-index to control stacking order) */
+}
+
+.logo4 {
   position: absolute; /* Positions the logo relative to its closest positioned ancestor (the image-container) */
   top: 70px;         /* Adjust as needed to place the logo */
   left: 20px;        /* Adjust as needed to place the logo */
@@ -664,7 +679,22 @@ Overall, "Sign of the Times" is a celebration of the enduring appeal of handcraf
   <br>
   <br>
   <br>
-  
+
+<footer>
+<div>
+  <div class=footer>
+    <br>
+    <div><img src="images/SCSA Logo Blue2.png" alt="Santa Cruz Sign Archive Logo" class="image-container3">
+      <br>
+      <br>
+    <div class="social-icons">
+      <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+      <a href="#" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+      <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+      <br>
+      <br>
+   </div></div>
+  </footer>
 
 
 <!-- Javascript that makes the expandable text -->
